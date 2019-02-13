@@ -64,19 +64,19 @@ Das ganze wird anhand eines Online Shops dargestellt.
  - Role : Klasse in der alle möglichen Rollen des Systems gespeichert sind (Salesman und Customer)
  
 ### Zugriffe
-####http://localhost:8080/JWT/login
+http://localhost:8080/JWT/login
  - POST
  - { "username": "Max Mustermann", "password": "12345" }
  - liefert im Response Authentification Header den generierten JWT. (falls erfolgreich)
  
-####http://localhost:8080/JWT/protected
+http://localhost:8080/JWT/protected
  - GET
  - liefert ein OK, sofern im Authentification Header ein valider JWT mit den Rollen User oder Salesman steht
  
-####http://localhost:8080/JWT/protected/customer
+http://localhost:8080/JWT/protected/customer
   - GET
   - liefert ein OK, sofern im Authentification Header ein valider JWT mit der Rolle User steht
   
-####http://localhost:8080/JWT/protected/customer
+http://localhost:8080/JWT/protected/customer
   - GET
   - liefert ein OK, sofern im Authentification Header ein valider JWT mit der Rolle Salesman steht
