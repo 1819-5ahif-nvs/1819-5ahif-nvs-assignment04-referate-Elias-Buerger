@@ -6,8 +6,8 @@ Soteria (Java EE Security (JSR 375) RI) bietet eine einheitliche Schnittstelle f
 Absichern von REST Resourcen, JSF Seiten, Forms, ...
 
 ### Aufgabe
-- Authentification: 
-- Authorization: 
+- Authentification: Ist die Person wirklich, wer sie vorgibt zu sein
+- Authorization: Hat die Person Zugriff auf etwas
 
 ### Grundklassen und Ablauf
  - Credential: Authorisierungsdaten (Benutzernamen, Passwörter, Rollen, JWTs, andere Tokens, ...)
@@ -44,24 +44,24 @@ Das ganze wird anhand eines Online Shops dargestellt.
 
 ### Aufbau
 #### webapp > WEB-INF
- - web.xml : Konfiguriert, welche Pfade vom Auth Mechanismus überprüft werden (Leider nicht via Code möglich)
- - jboss-web.xml : Konfiguriert die Security Domaine (Leider nicht via Code möglich, vom Application Server abhängig)
+ - web.xml: Konfiguriert, welche Pfade vom Auth Mechanismus überprüft werden (Leider nicht via Code möglich)
+ - jboss-web.xml: Konfiguriert die Security Domaine (Leider nicht via Code möglich, vom Application Server abhängig)
 #### business
- - UserRepository : Mock für ein Repository, dass auf eine Datenbank zugreift
+ - UserRepository: Mock für ein Repository, dass auf eine Datenbank zugreift
 #### entities
- - User : Ein registrierter Nutzer im Online Shop
- - Customer : Ein Nutzer, der auf der Platform einkaufen kann
- - Salesman : Ein Nutzer, der auf der Platform verkaufen kann
+ - User: Ein registrierter Nutzer im Online Shop
+ - Customer: Ein Nutzer, der auf der Platform einkaufen kann
+ - Salesman: Ein Nutzer, der auf der Platform verkaufen kann
 #### rest
- - RestConfig : Konfiguriert REST Path und Rollen
+ - RestConfig: Konfiguriert REST Path und Rollen
 ##### endpoints
- - LoginEndpoint : Ein Endpoint, auf den jeder zugreifen kann. Hier kann man sich mittels POST anmelden.
- - ProtectedEndpoint : Ein Endpoint mit Methoden, auf die nur gewisse Rollen zugreifen können.
+ - LoginEndpoint: Ein Endpoint, auf den jeder zugreifen kann. Hier kann man sich mittels POST anmelden.
+ - ProtectedEndpoint: Ein Endpoint mit Methoden, auf die nur gewisse Rollen zugreifen können.
 ##### security
- - JWTCredential : Entität zum Speichern eines JWT. (Erbt von Soteria's Credential)
- - JWTMechanism : Fängt alle Request ab und versucht den JWT aus dem HTTP Header auszulesen und mithilfe des JWTStore zu validieren
- - JWTStore : Validiert JWT Credentials und stellt diese aus.
- - Role : Klasse in der alle möglichen Rollen des Systems gespeichert sind (Salesman und Customer)
+ - JWTCredential: Entität zum Speichern eines JWT. (Erbt von Soteria's Credential)
+ - JWTMechanism: Fängt alle Request ab und versucht den JWT aus dem HTTP Header auszulesen und mithilfe des JWTStore zu validieren
+ - JWTStore: Validiert JWT Credentials und stellt diese aus.
+ - Role: Klasse in der alle möglichen Rollen des Systems gespeichert sind (Salesman und Customer)
  
 ### Zugriffe
 http://localhost:8080/JWT/login
