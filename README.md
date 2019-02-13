@@ -43,7 +43,7 @@ JWT generiert und an den Client gesendet. Dieser kann damit auf die abgesicherte
 Das ganze wird anhand eines Online Shops dargestellt.
 
 ### Aufbau
-### webapp > WEB-INF
+#### webapp > WEB-INF
  - web.xml : Konfiguriert, welche Pfade vom Auth Mechanismus überprüft werden (Leider nicht via Code möglich)
  - jboss-web.xml : Konfiguriert die Security Domaine (Leider nicht via Code möglich, vom Application Server abhängig)
 #### business
