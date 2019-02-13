@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: javax.security.enterprise:javax.security.enterprise-api:1.1-b01-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/security/enterprise/javax.security.enterprise-api/1.1-b01-SNAPSHOT/javax.security.enterprise-api-1.1-b01-20170827.084736-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/security/enterprise/javax.security.enterprise-api/1.1-b01-SNAPSHOT/javax.security.enterprise-api-1.1-b01-20170827.084736-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/security/enterprise/javax.security.enterprise-api/1.1-b01-SNAPSHOT/javax.security.enterprise-api-1.1-b01-20170827.084736-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
